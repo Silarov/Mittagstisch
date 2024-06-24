@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: titleFont;
-    src: url(/img/font/riffic/RifficFree-Bold.ttf);
+    src: url('/img/font/riffic/RifficFree-Bold.ttf') format("truetype");
 }
 
 
@@ -29,7 +29,7 @@
     height: calc(100vh - var(--nav-height));
     position: absolute;
     top: var(--nav-height);
-    background-image: url("/img/meal-g8bbb35c02_1920.jpg");
+    background-image: url('/img/meal-g8bbb35c02_1920.jpg');
     background-size: cover;
     background-position: center;
     filter: brightness(0.5);
