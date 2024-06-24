@@ -29,12 +29,11 @@ $mail->CharSet = $smtpCharSet;
 $mail->ContentType = $smtpContentType;
 $mail->Encoding = $smtpEncoding;
 
-
-
 $fnameChild = $_POST['Vorname_Kind'];
 $lnameChild = $_POST['Nachname_Kind'];
 $classChild = $_POST['Klasse_Kind'];
 $teacherChild = $_POST['Lehrer_Kind'];
+$birthdayChild = $_POST['Geburtstag'];
 $fnameParent = $_POST['Vorname_Elternteil_1'];
 $lnameParent = $_POST['Nachname_Elternteil_1'];
 $address = $_POST['Adresse_1'];
@@ -42,14 +41,16 @@ $tel = $_POST['Telefonnummer_1'];
 $email = $_POST['Mail_Adresse_1'];
 $comment = $_POST['Bemerkung'];
 $day = $_POST['Betreuungstermin_ab'];
-$validFor;
+$validFor = [];
 $selectedDates = isset($_POST['selectedDates']) ? $_POST['selectedDates'] : [];
-
-$mailBody;
-
 
 $dateBegin = new DateTime($day);
 $formattedDateBegin = $dateBegin->format('d.m.Y');
+
+$dateBirthDay = new DateTime($birthdayChild);
+$formattedBirthDay = $dateBirthDay->format('d.m.Y');
+
+
 
 // Define the email content
 $mail->setFrom('anmeldung@mittagstisch-hirschthal.ch', 'Anmeldung Mittagstisch Hirschthal');
@@ -97,6 +98,7 @@ Vorname Kind: $fnameChild <br>
 Nachname Kind: $lnameChild <br>
 Klasse Kind: $classChild <br>
 Lehrer Kind: $teacherChild <br>
+Geburtstag: $formattedBirthDay <br>
 ---------------------------------------- <br>
 Vorname Bezugsperson: $fnameParent <br>
 Nachname Bezugsperson: $lnameParent <br>
@@ -221,12 +223,10 @@ try {
         <div class="small-break"></div>
         <?php if ($successClass === 'success') { ?>
             <h2>Dies sind Ihre angegebenen Daten:</h2>
-            <?php
-            echo $mailBody;
-        } ?>
+            <?php echo $mailBody; ?>
+        <?php } ?>
         <div class="small-break"></div>
         <a href="../index.html">Jetzt zurück auf die Startseite</a>
     </main>
     <footer></footer>
-
 </html>
