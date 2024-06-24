@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 28" width="33" height="28">
+	<title>image</title>
+	<defs>
+		<image  width="33" height="28" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAcCAMAAADY3iYuAAAAAXNSR0IB2cksfwAAAXFQTFRFAQEBAwMDAAAAenp6////ZWVlg4ODFxcXEhIS3d3dwMDALCws7u7umZmZjo6O9vb2OTk5tba1+Pj4QEBAMDAw8/Pzl5eXXl5e/f39ysrK4+PjFhYWERER3t7edXV1VFRUZ2dnkpKS7OzsISEhCwsL19fXAgICOTk59/f3pKWkhISEPj4+wMDAVFRUJSUl7/Dvc3Nz2NjYDAwMrKyr5OTkFxcXICAg6urqioqKS0tL/Pz8aWlpp6inMjIyBQUFzs7Ow8PDTk5OvLy8dXV1PT09CgoK09PTZmZmHh4e5+fnm5ub4eHhGRkZnZ2dLS0t8PDwPz8/+fn5ZGRkt7e3QkJCxcXFYGBgy8vLBAQEGRkZ7Ozs9fX1ExMT39/fd3d3iIiIlpaWlJSU7e3tIyMjFBQU6enp5ubmOjs6rKyreXl5bGxsxsbGVVVV2traISEh6+vrjIyMqamo9PT0MzMzT09Pvb29CAgI1dXVY2Njf39/6Ojo1AvtrwAAAHt0Uk5T/////wAA/wD//wD//wD/AAD/AAD/AAD/AAD/////AP8A/wAA/////wAA/wD/AP///wD///////8A/wAA/wD//wD/AP8A//8A//8AAAD//wD/AAD/AP//AP///wD//wD/AP8AAP////8A////AAD//wD/AAD/AP//////w8uZTQAAAUtJREFUeJyF0VVXA0EMBeDZy8W1hcLiXoq7FXd3dysuxe3Xk61A292WvGyS882eTEYpzSoQR4l4aCpBJcIqkpIFpGhAappKtxQZAjKzJLFR2bMtQI5DRK4keToV8zWzsAkoKASKiimCJSZQqosok6ScPlFRGQGqqo0xnUCNyy9YGyHqjDHrAWcDA0JvDANNzdIzrtjCoGBrW6hol05HJ9DV/SfYEwJ63dLok6SfIcIx8AsGh6QeljFH3KGCoyooxqRyjQMTkwwTnAqA6RkpZgMXChNz836xYGxTxlxcihS+c8DyiqSrkqzRJOzrxpgbxjZlpk3dLLi1Dezsknvy6PsHtBA8lJ8ckcfyOaGlOD0DPOcXHuDSbi14JaevbwDtllGEfgco5V+ateC97wUfvNEFHw3xxBji+QV41WMJvuH9gzEFP7/4j/j2RoofzuUq4cSlMg8AAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="0" y="0"/>
+</svg>

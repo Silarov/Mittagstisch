@@ -1,0 +1,151 @@
+.modal-body-img-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-text {
+    margin: 10px;
+}
+
+.modal {
+    display: none;
+}
+
+.modal-body {
+    max-height: 100vh;
+    max-width: 100vw;
+    position: fixed;
+    color: white;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 10px;
+    z-index: 3;
+}
+
+.modal-page {
+    position: fixed;
+    bottom: 1vh;
+    color: white;
+    width: 100vw;
+    text-align: center;
+    display: none;
+}
+
+.modal-bg {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(49, 49, 49, 0.8);
+    z-index: 2;
+}
+
+.modal-img img{
+    max-height: 75vh;
+    max-width: 75vw;
+}
+
+.modal-close {
+    position: fixed;
+    right: 2vw;
+    top: 2vw;
+    font-weight:900;
+    font-size: 300%;
+    color: white;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.modal-close :hover{
+    color: rgb(118, 147, 201);
+    transition: all 0.2s ease-in-out;
+}
+
+.modal-arrows {
+    z-index: 1;
+    width: 6rem;
+    height: 6rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+    font-size: 4rem;
+    z-index: 3;
+}
+
+.arrow {
+    padding: 1rem;
+    display: flex;
+    color: white;
+    cursor: pointer;
+    z-index: 3;
+    border-radius: 2vh;
+    transition: all 0.25s ease-in-out;
+}
+
+.modal-arrow-left,
+.modal-arrow-right {
+    top: 50%;
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.modal-arrow-left {
+    position: fixed;
+    left: 0;
+}
+
+.modal-arrow-right {
+    position: fixed;
+    right: 0;
+}
+
+.modal-arrows :hover {
+    color: rgb(118, 147, 201);
+    font-size: 4.5rem;
+}
+
+@media screen and (min-width: 800px){
+
+    .modal-page-side-img {
+        max-width: 5vw;
+        max-height: 5vh;
+        opacity: 0.75;
+        margin: 0 0.5vw;
+        filter: blur(0.5px);
+    }
+
+    .modal-page-main-img {
+        max-width: 7vw;
+        max-height: 7vh;
+        min-height: 6vh;
+        margin: 0 0.5vw;
+    }
+
+    .modal-page-imgs {
+        position: fixed;
+        bottom: 3vh;
+        left: 0;
+        color: white;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-page-img {
+        width: 6vw;
+    }
+
+    .modal-page {
+        display: block;
+    }
+
+    .arrow {
+        padding: 5rem;
+    }
+}

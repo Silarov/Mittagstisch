@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 222 65" width="222" height="65">
+	<title>logo-handwritten</title>
+	<defs>
+		<image  width="222" height="65" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAABBAQMAAACEmYhiAAAAAXNSR0IB2cksfwAAAAZQTFRFAAAA////pdmf3QAAAAJ0Uk5TAP9bkSK1AAACQElEQVR4nHWVPY7UMBSAn+XC3bjdItpcgY4UI3KVPcLQjQTauKNBnIcCoRxjO9xREomCrIjG+P34J/FgaXa8/p79/t8A0NLbjb47ABPCBrvVO+sYqhDXvIMbaDo4Q78C2LVm2oPyuBkUPf9cQxs/DO1CWmr4MX7o9DrR/8YVphBccPeetekKkjEEJ18OKpUw4J8gT1XwnOHWwjVBUr6H2ido5LAyiCOH0LbwHSQ4Cqz8vGb4QQ5NZmIFwt+u8o3F5gT1T4GPxZ4i9kk253xUiSVd15j1p8oeEjvJZonQyy6tTmBM/AOQJXUGREM8GgPVWZ3YTgxzOhaZ2mpjM+yhX5TbG5tdiF8XDi8fqJw2oBQ+MWRPxuAyxCr1uniiNzKaBWM8O/+HtuTs6KioL8meWwjpDdArCzF8hu5t+E4Qn5vkBS+2PUy/viRo1hoaD8P047PoVPR+1MLN1DsYQvgmTlGZh8VKRcYWe/P3dRMPkfWvc8+QwqH1S4mbvukIyVdL5puvBY4zhotCxk1oC4x+YoWQACvjQueLjjKHqe097BcGCDOHt8OBoWeUOSPxqBfWAyUk1tc0HyD11kLQHoYXTx2K3EkdZpc0EvnfHaeevIpeTKExlXs3uhlHojsyrjsq0KG5yO15vQ95CC5ZYrdwKMq0uTQq6Q53UwO5A/ltf4ScuPN9+FjsaeFQ3q5nJS8yghu4hb6o1HehDLh6svNCaRlwLcSb8htjGrhw8RE8Mszm6P4H7W1M1XhqIIy5bhr4D8cFyVlexdzUAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="0" y="0"/>
+</svg>
