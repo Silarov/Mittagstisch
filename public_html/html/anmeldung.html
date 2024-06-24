@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" href="/css/signin.css">
+    <link rel="shortcut icon" href="/img/logo/logo_notext2.png" type="image/x-icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/anmeldung.js"></script>
+    <title>Anmeldung</title>
+</head>
+
+<body>
+    <header></header>
+    <main>
+        <form action="mail.php" id="signform" method="post">
+            <div class="form-container">
+                <h1>Kind</h1><br>
+                <div class="child-form">
+                    <div class="form-row">
+                        <div class="form-single">
+                            <label for="Vorname_Kind">Vorname:*</label>
+                            <input type="text" id="Vorname_Kind" name="Vorname_Kind" required>
+                        </div>
+                        <div class="form-single">
+                            <label for="Nachname_Kind">Nachname:*</label>
+                            <input type="text" id="Nachname_Kind" name="Nachname_Kind" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-single">
+                            <label for="Klasse_Kind">Klasse*</label>
+                            <input type="text" id="Klasse_Kind" name="Klasse_Kind" required>
+                        </div>
+                        <div class="form-single">
+                            <label for="Lehrer_Kind">Lehrperson:*</label>
+                            <input type="text" id="Lehrer_Kind" name="Lehrer_Kind" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-single">
+                            <label for="Geburtstag">Geburtsdatum*</label>
+                            <input type="date" id="Geburtstag" name="Geburtstag" required>
+                        </div>
+                    </div>
+                </div><br><br>
+                <div class="parent1">
+                    <h1>Bezugsperson 1</h1><br>
+                    <div class="form-row">
+                        <div class="form-single">
+                            <label for="Vorname_Elternteil_1">Vorname:*</label>
+                            <input type="text" id="Vorname_Elternteil_1" name="Vorname_Elternteil_1" required>
+                        </div>
+                        <div class="form-single">
+                            <label for="Nachname_Elternteil_1">Nachname:*</label>
+                            <input type="text" id="Nachname_Elternteil_1" name="Nachname_Elternteil_1" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-single">
+                            <label for="Adresse_1">Adresse:*</label>
+                            <input type="text" id="Adresse_1" name="Adresse_1" required>
+                        </div>
+                        <div class="form-single">
+                            <label for="Telefonnummer_1">Telefonnummer:*</label>
+                            <input type="tel" id="Telefonnummer_1" name="Telefonnummer_1" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-single">
+                            <label for="Mail_Adresse_1">E-Mail Adresse:*</label>
+                            <input type="email" id="Mail_Adresse_1" name="Mail_Adresse_1" required>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+
+                <input type="checkbox" id="secondPersonCheck">
+                <label for="secondPersonCheck">Zweite Bezugsperson einfügen</label>
+
+                <br><br>
+                <div class="parent2">
+                    <h1>Bezugsperson 2</h1><br>
+                    <div class="form-row">
+                        <div class="form-single">
+                            <label for="Vorname_Elternteil_2">Vorname:*</label>
+                            <input type="text" id="Vorname_Elternteil_2" name="Vorname_Elternteil_2">
+                        </div>
+                        <div class="form-single">
+                            <label for="Nachname_Elternteil_2">Nachname:*</label>
+                            <input type="text" id="Nachname_Elternteil_2" name="Nachname_Elternteil_2">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-single">
+                            <label for="Adresse_2">Adresse:*</label>
+                            <input type="text" id="Adresse_2" name="Adresse_2">
+                        </div>
+                        <div class="form-single">
+                            <label for="Telefonnummer_2">Telefonnummer:*</label>
+                            <input type="tel" id="Telefonnummer_2" name="Telefonnummer_2">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-single">
+                            <label for="Mail_Adresse_2">E-Mail Adresse:*</label>
+                            <input type="email" id="Mail_Adresse_2" name="Mail_Adresse_2">
+                        </div>
+                    </div>
+                </div><br><br>
+                <h1>Betreuungstage*</h1><br>
+                <div class="form-days-container">
+
+                    <!-- Monday -->
+                    <div class="form-days-monday-title form-days-title">
+                        <p for="form-days-monday">Montag</p>
+                        <img src="/img/icons/caret-down-solid.svg" alt="caret down" class="caret">
+                        <br>
+                    </div>
+                    <div class="form-days-container-monday form-days-table-container hidden">
+                        <br>
+                        <hr>
+                        <input type="checkbox" name="selectedDates[]" value="Montag-Morgen" id="Montag-Morgen">
+                        Frühbetreuung <br>
+                        6.30-8.00 Uhr <br> <br>
+                        <input type="checkbox" name="selectedDates[]" value="Montag-Mittag" id="Montag-Mittag">
+                        Mittagstisch <br>
+                        11.45-13.30 Uhr <br> <br>
+                        <input type="checkbox" name="selectedDates[]" value="Montag-Nachmittag" id="Montag-Nachmittag">
+                        Nachmittagsbetreuung 1<br>
+                        13.30-15.30 <br> <br>
+                        <input type="checkbox" name="selectedDates[]" value="Montag-Abend" id="Montag-Abend">
+                        Nachmittagsbetreuung 2<br>
+                        15.30-17.30
+                        <hr><br>
+                    </div>
+
+                    <!-- Tuesday -->
+                    <div class="form-days-tuesday-title form-days-title">
+                        <p for="form-days-tuesday">Dienstag</p>
+                        <img src="/img/icons/caret-down-solid.svg" alt="caret down" class="caret">
+                        <br>
+                    </div>
+                    <div class="form-days-container-tuesday form-days-table-container hidden">
+                        <br>
+                        <hr>
+                        <input type="checkbox" name="selectedDates[]" value="Dienstag-Morgen" id="Dienstag-Morgen">
+                        Frühbetreuung <br>
+                        6.30-8.00 Uhr <br> <br>
+                        <input type="checkbox" name="selectedDates[]" value="Dienstag-Mittag" id="Dienstag-Mittag">
+                        Mittagstisch <br>
+                        11.45-13.30 Uhr <br> <br>
+                        <input type="checkbox" name="selectedDates[]" value="Dienstag-Nachmittag"
+                            id="Dienstag-Nachmittag">
+                        Nachmittagsbetreuung 1<br>
+                        13.30-15.30 <br> <br>
+                        <input type="checkbox" name="selectedDates[]" value="Dienstag-Abend" id="Dienstag-Abend">
+                        Nachmittagsbetreuung 2<br>
+                        15.30-17.30
+                        <hr><br>
+                    </div>
+
+                    <!-- Thursday -->
+                    <div class="form-days-thursday-title form-days-title">
+                        <p for="form-days-thursday">Donnerstag</p>
+                        <img src="/img/icons/caret-down-solid.svg" alt="caret down" class="caret">
+                        <br>
+                    </div>
+                    <div class="form-days-container-thursday form-days-table-container hidden">
+                        <br>
+                        <hr>
+                        <input type="checkbox" name="selectedDates[]" value="Donnerstag-Morgen" id="Donnerstag-Morgen">
+                        Frühbetreuung <br>
+                        6.30-8.00 Uhr <br> <br>
+                        <input type="checkbox" name="selectedDates[]" value="Donnerstag-Mittag" id="Donnerstag-Mittag">
+                        Mittagstisch <br>
+                        11.45-13.30 Uhr <br> <br>
+                        <input type="checkbox" name="selectedDates[]" value="Donnerstag-Nachmittag"
+                            id="Donnerstag-Nachmittag">
+                        Nachmittagsbetreuung 1<br>
+                        13.30-15.30 <br> <br>
+                        <input type="checkbox" name="selectedDates[]" value="Donnerstag-Abend" id="Donnerstag-Abend">
+                        Nachmittagsbetreuung 2<br>
+                        15.30-17.30
+                        <hr><br>
+                    </div>
+
+                    <!-- Friday -->
+                    <!--<div class="form-days-friday-title form-days-title">
+                        <p for="form-days-friday">Freitag</p>
+                        <img src="/img/icons/caret-down-solid.svg" alt="caret down" class="caret">
+                        <br>
+                    </div>
+                    <div class="form-days-container-friday form-days-table-container hidden">
+                        <br>
+                        <hr>
+                        <input type="checkbox" name="selectedDates[]" value="Freitag-Morgen" id="Freitag-Morgen">
+                        Frühbetreuung <br>
+                        6.30-8.00 Uhr <br> <br>
+                        <input type="checkbox" name="selectedDates[]" value="Freitag-Mittag" id="Freitag-Mittag">
+                        Mittagstisch <br>
+                        11.45-13.30 Uhr <br> <br>
+                        <input type="checkbox" name="selectedDates[]" value="Freitag-Nachmittag"
+                            id="Freitag-Nachmittag">
+                        Nachmittagsbetreuung 1<br>
+                        13.30-15.30 <br> <br>
+                        <input type="checkbox" name="selectedDates[]" value="Freitag-Abend" id="Freitag-Abend">
+                        Nachmittagsbetreuung 2<br>
+                        15.30-17.30
+                        <hr><br>
+                    </div>-->
+                </div>
+                <div class="small-break"></div>
+                <div class="form-date-container">
+                    <div class="form-date">
+                        <label for="Betreuungstermin_ab">Betreuungstermin ab:*</label>
+                        <input type="date" id="Betreuungstermin_ab" name="Betreuungstermin_ab" min="DD.MM.YYYY">
+                    </div>
+                </div>
+                <div class="small-break"></div>
+                <div class="form-valid-container">
+                    <div class="form-valid" required>
+                        <h3>Gültig für:*</h3>
+                        <input type="checkbox" name="Semester_1" value="Semester_1">
+                        <label for="Semester_1">1. Semester</label>
+                        <br>
+                        <input type="checkbox" name="Semester_2" value="Semester_2">
+                        <label for="Semester_2">2. Semester</label>
+                        <br><br>
+                        <input type="checkbox" name="Quartal_1" value="Quartal_1">
+                        <label for="Quartal_1">1. Quartal</label>
+                        <br>
+                        <input type="checkbox" name="Quartal_2" value="Quartal_2">
+                        <label for="Quartal_2">2. Quartal</label>
+                        <br>
+                        <input type="checkbox" name="Quartal_3" value="Quartal_3">
+                        <label for="Quartal_3">3. Quartal</label>
+                        <br>
+                        <input type="checkbox" name="Quartal_4" value="Quartal_4">
+                        <label for="Quartal_4">4. Quartal</label>
+                        <br><br>
+                        <input type="checkbox" name="Flexibel" value="Flexibel">
+                        <label for="Flexibel">Flexibel</label>
+                    </div>
+                </div>
+                <br><br>
+                <div class="question question_1-container">
+                    <!-- Question 1: Darf mein Kind nach der Betreuung alleine nach Hause? -->
+                    <label for="NachBetreuungNachHause">Darf mein Kind nach der Betreuung alleine nach
+                        Hause?</label><br>
+                    <div class="question-answer" required>
+                        <input type="radio" id="NachBetreuungNachHause-yes" name="NachBetreuungNachHause" value="yes">
+                        <label for="NachBetreuungNachHause-yes">Ja</label>
+                        <input type="radio" id="NachBetreuungNachHause-no" name="NachBetreuungNachHause" value="no">
+                        <label for="NachBetreuungNachHause-no">Nein</label>
+                    </div>
+                </div>
+                <br><br>
+                <div class="question question_2-container">
+                    <!-- Question 2: Darf mein Kind in Ausnahmefällen kurz alleine nach Hause? -->
+                    <label for="AlleineNachHause">Darf mein Kind in Ausnahmefällen (z.B. etwas vergessen) kurz alleine
+                        nach
+                        Hause?</label><br>
+                    <div class="question-answer" required>
+                        <input type="radio" id="AlleineNachHause-yes" name="AlleineNachHause" value="yes">
+                        <label for="AlleineNachHause-yes">Ja</label>
+                        <input type="radio" id="AlleineNachHause-no" name="AlleineNachHause" value="no">
+                        <label for="AlleineNachHause-no">Nein</label>
+                    </div>
+                </div>
+                <br><br>
+                <div class="question question_3-container">
+                    <!-- Question 3: Besonderheiten beim Essen -->
+                    <label for="Allergien">Gibt es bei Ihrem Kind Besonderheiten beim Essen, die es zu beachten gilt?
+                        Allergien, Unverträglichkeiten, Religion etc.</label><br>
+                    <div class="question-anser" required>
+                        <input type="radio" id="Allergien-yes" name="Allergien" value="yes">
+                        <label for="Allergien-yes">Ja</label>
+                        <input type="radio" id="Allergien-no" name="Allergien" value="no">
+                        <label for="Allergien-no">Nein</label><br>
+                        <textarea id="Allergien-details" name="Allergien-details" placeholder="Bitte erläutern"
+                            style="display: none;"></textarea>
+                    </div>
+                </div>
+                <br><br>
+                <div class="question question_4-container">
+                    <!-- Question 4: Weitere Allergien -->
+                    <label for="Lebensmittelallergien">Hat Ihr Kind neben Lebensmittelallergien weitere Allergien? Wenn
+                        Ja,
+                        welche?</label><br>
+                    <div class="question-anser" required>
+                        <input type="radio" id="Lebensmittelallergien-yes" name="Lebensmittelallergien" value="yes">
+                        <label for="Lebensmittelallergien-yes">Ja</label>
+                        <input type="radio" id="Lebensmittelallergien-no" name="Lebensmittelallergien" value="no">
+                        <label for="Lebensmittelallergien-no">Nein</label><br>
+                        <textarea id="Lebensmittelallergien-details" name="Lebensmittelallergien-details"
+                            placeholder="Bitte erläutern" style="display: none;"></textarea><br><br>
+                    </div>
+                </div>
+
+                <div class="question question_5-container" required>
+                    <!-- Question 5: Regelmässige Medikamente -->
+                    <label for="Medikamente">Muss Ihr Kind regelmässig Medikamente einnehmen? Wenn Ja, was müssen wir
+                        beachten?</label><br>   
+                    <input type="radio" id="Medikamente-yes" name="Medikamente" value="yes">
+                    <label for="Medikamente-yes">Ja</label>
+                    <input type="radio" id="Medikamente-no" name="Medikamente" value="no">
+                    <label for="Medikamente-no">Nein</label><br>
+                    <textarea id="Medikamente-details" name="Medikamente-details" placeholder="Bitte erläutern"
+                        style="display: none;"></textarea><br><br>
+                </div>
+
+                <!-- Question 6: Darf mein Kind nach der Betreuung alleine nach Hause? -->
+                <label for="Schulhausplatz">Darf mein Kind nach dem Mittagessen bereits um 13 Uhr auf den
+                    Schulhausplatz?</label><br>
+                <input type="radio" id="Schulhausplatz-yes" name="Schulhausplatz" value="yes">
+                <label for="Schulhausplatz-yes">Ja</label>
+                <input type="radio" id="Schulhausplatz-no" name="Schulhausplatz" value="no">
+                <label for="Schulhausplatz-no">Nein</label><br><br>
+
+                <!-- BEMERKUNGS-FELD -->
+                <div class="form-row">
+                    <div class="form-single-comment">
+                        <label for="Bemerkung">Bemerkung (optional):</label>
+                        <textarea id="Bemerkung" name="Bemerkung" rows="5"></textarea>
+                    </div>
+                </div><br>
+                <div class="small-break"></div>
+                <input type="checkbox" name="Akzeptiert_Reglement" value="Akzeptiert_Reglement">
+                <label for="Akzeptiert_Reglement">Ich habe das Betriebsreglement des Vereins "Mittagstisch
+                    Hirschthal"
+                    gelesen und
+                    akzeptiere dieses.*</label>
+                <div class="small-break"></div>
+
+                <input type="submit" value="Jetzt verbindlich anmelden">
+            </div>
+        </form>
+    </main>
+    <footer></footer>
+
+</html>

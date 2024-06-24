@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700;900&display=swap');
+
+:root {
+    --main-color: #c83c34;
+    --nav-height: 110px;
+    --pc-width: 20vw;
+    --main-bg-color: #272e33;
+    --text-width: 40vw;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 16px;
+    overflow-x:hidden;
+    margin: 0 var(--pc-width);
+}
+
+a {
+    color: black;
+}
+
+.big-break {
+    margin: 10vh 0;
+}
+
+.small-break {
+    margin: 5vh 0;
+}
+
+/*---------------------- Scrollbar ----------------------------*/
+  
+  
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: rgba(90, 90, 90);
+}
+  
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/*---------------------- Navbar ----------------------------*/
+
+header {
+    margin: 0 0 var(--nav-height) 0;
+}
+
+nav {
+    height: var(--nav-height);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.5s;
+    margin: 0 var(--pc-width);
+}
+
+.nav-container {
+    background-color: #ffffff;
+    width: 100vw;
+    height: var(--nav-height);
+    margin: 0 calc(-1 * var(--pc-width));
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+.logo {
+    height: 90px;
+    width: 200px;
+    padding: 10px 5px;
+    display: flex;
+    justify-content: flex-start;
+    position: absolute;
+    cursor: pointer;
+    background-image: url("/img/logo/logo.png"); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+nav ul {
+    font-size: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+    font-weight: 400;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: var(--nav-height);
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px;
+    transition: ease 0.5s;
+}
+
+nav ul li a:hover {
+    background: var(--main-color);
+    color: white;
+}
+
+.anmeldung {
+    color: white;
+    border-radius: 0;
+    font-size: 1.15rem;
+    background-color: var(--main-color);
+}
+
+.anmeldung :hover {
+    background-color: var(--main-bg-color);
+}
+
+.hamburger {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+/*---------------------- Main ----------------------------*/
+
+.page-title-img {
+    margin: 0 calc(-1 * var(--pc-width));
+    height: 20vh;
+    background-image: url("/img/hirschthal_bg.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.page-title-text {
+    margin: 0 var(--pc-width);
+    font-size: x-large;
+}
+
+main {
+    margin-bottom: 15vh;
+}
+
+.img-text-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.img-text-one,
+.img-text-two {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img-text-container-img,
+.img-text-container-text {
+    max-width: 25vw;
+}
+
+.banner-offer {
+    margin: 0 calc(-1 * var(--pc-width));
+    background-color: var(--main-bg-color);
+    color: white;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.banner-offer-text {
+    max-width: var(--text-width);
+}
+
+/*---------------------- Footer ----------------------------*/
+
+.footer-container {
+    background-color: var(--main-bg-color);
+    width: 100vw;
+    margin: 0 calc(-1 * var(--pc-width));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 0;
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-after {
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    :root {
+        --pc-width: 5vw;
+        --text-width: 90vw;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin: var(--nav-height) 0;
+    }
+
+    nav ul li {
+        display: inline-block;
+        line-height: var(--nav-height);
+    }
+
+    .dt {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger img {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 0;
+        height: 45px;
+        width: auto;
+    }
+
+    nav .close-hamburger {
+        display: none;
+    }
+
+    .page-title-text {
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+    }
+
+    .nav-container {
+        width: 100vw;
+        height: var(--nav-height);
+      }
+      
+      .nav-container.fullscreen {
+        height: 100vh;
+      }
+      
+      .dt {
+        display: none;
+      }
+      
+      .dt.visible {
+        display: block;
+      }
+      
+      .open-hamburger {
+        display: block;
+      }
+      
+      .close-hamburger {
+        display: none;
+      }
+
+      .img-text-one,
+    .img-text-two {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .img-text-container-img,
+    .img-text-container-text {
+        max-width: 75vw;
+    }
+
+    .banner-offer {
+        flex-direction: column;
+        padding: 10vh 0 0 0;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .logo {
+        background-image: url("/img/logo/logo_notext2.png"); /* Logo without text for smaller screens */
+    }
+
+    .page-title-img {
+        margin: 0 calc(-1 * var(--pc-width));
+        height: 10vh;
+        background-image: none;
+    }
+
+    .footer-text {
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}

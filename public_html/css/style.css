@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700;900&display=swap');
+
+@font-face {
+    font-family: titleFont;
+    src: url(/img/font/riffic/RifficFree-Bold.ttf);
+}
+
+
+:root {
+    --main-color: #c83c34;
+    --nav-height: 110px;
+    --pc-width: 20vw;
+    --main-bg-color: #272e33;
+    --text-width: 40vw;
+}
+
+/*---------------------- Main ----------------------------*/
+
+.title-page {
+    width: 100vw;
+    height: calc(100vh - var(--nav-height));
+    margin: 0 calc(-1 * var(--pc-width));
+    display: flex;
+    align-items: center;
+}
+
+.title-img {
+    width: 100vw;
+    height: calc(100vh - var(--nav-height));
+    position: absolute;
+    top: var(--nav-height);
+    background-image: url("/img/meal-g8bbb35c02_1920.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.5);
+}
+
+.name-start {
+    margin: 0 var(--pc-width);
+    color: rgb(255, 255, 255);
+    z-index: 1;
+}
+
+.title-name {
+    max-width: var(--text-width);
+    font-family: titleFont;
+    font-size: 80px;
+    font-weight: 900;
+}
+
+.title-signin {
+    font-weight: 700;
+    font-size: large;
+    color: white;
+    background-color: var(--main-color);
+    padding: 20px;
+    border: 5px solid white;
+    width: max-content;
+    cursor: pointer;
+}
+
+.rules {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rules a {
+    text-decoration: none;
+}
+
+.rules-text {
+    max-width: 60%;
+}
+
+#popup-container {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    max-width: 200px;
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--main-bg-color);
+}
+
+#popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 8px;
+}
+
+#popup-close {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+
+    :root {
+        --pc-width: 5vw;
+        --text-width: 90vw;
+    }
+
+    .title-name {
+        font-size: 50px;
+    }
+
+    .ernahrung {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .ernahrung-text {
+        max-width: 99%;
+    }
+
+    .ernahrung-img img {
+        max-width: 90vw;
+    }
+}
