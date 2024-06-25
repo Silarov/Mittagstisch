@@ -14,17 +14,17 @@ $(document).ready(function () {
                     <div class="nav-container">
                         <nav>
                             <!--<a href="/index.html"><img src="/img/logo/logo.png" class="logo" alt="logo" /></a>-->
-                            <a href="/index.html" class="logo"></a>
+                            <a href="/Mittagstisch/index.html" class="logo"></a>
                             <ul>
-                                <li><a href="/index.html" class="dt">Home</a></li>
-                                <li><a href="/html/angebot.html" class="dt">Angebot</a></li>
-                                <li><a href="/html/standort.html" class="dt">Standort</a></li>
-                                <li><a href="/html/ueber_uns.html" class="dt">Über Uns</a></li>
-                                <li><a href="/html/anmeldung.html" class="dt anmeldung" id="anmeldung">Anmeldung</a></li>
+                                <li><a href="/Mittagstisch/index.html" class="dt">Home</a></li>
+                                <li><a href="/Mittagstisch/html/angebot.html" class="dt">Angebot</a></li>
+                                <li><a href="/Mittagstisch/html/standort.html" class="dt">Standort</a></li>
+                                <li><a href="/Mittagstisch/html/ueber_uns.html" class="dt">Über Uns</a></li>
+                                <li><a href="/Mittagstisch/html/anmeldung.html" class="dt anmeldung" id="anmeldung">Anmeldung</a></li>
                                 <li>
                                     <div class="hamburger">
-                                        <img src="/img/icons/bars-solid.svg" alt="hamburger menu" class="open-hamburger">
-                                        <img src="/img/icons/xmark-solid.svg" alt="close hamburger menu" class="close-hamburger">
+                                        <img src="/Mittagstisch/img/icons/bars-solid.svg" alt="hamburger menu" class="open-hamburger">
+                                        <img src="/Mittagstisch/img/icons/xmark-solid.svg" alt="close hamburger menu" class="close-hamburger">
                                     </div>
                                 </li>
                             </ul>
@@ -71,8 +71,8 @@ $(document).ready(function () {
                     <div class="footer-text-column2-downloads">
                         <h1>Downloads</h1>
                         <p>
-                            <a href="..\\files\\Statuten.pdf" target="_blank"> Statuten.pdf (435,2K) </a><br>
-                            <a href="..\\files\\Betriebsreglement.pdf" target="_blank"> Betriebsreglement.pdf (445,4K) </a>
+                            <a href="/Mittagstisch/files/Statuten.pdf" target="_blank"> Statuten.pdf (435,2K) </a><br>
+                            <a href="/Mittagstisch/files/Betriebsreglement.pdf" target="_blank"> Betriebsreglement.pdf (445,4K) </a>
                         </p>
                     </div>
                 </div>
@@ -93,11 +93,11 @@ $(document).ready(function () {
                             - <a href="https://www.hirschthal.ch/public/upload/assets/116/KinderbetreuungsreglementHirschthalvom08-12-2017.pdf?fp=1574087541343" target="_blank"> Kinderbetreuungsregelement der Gemeinde Hirschthal </a> <br><br>
 
                             Weitere Links: <br>
-                            - <a href="/html/impressum.html">Impressum </a> <br>
-                            - <a href="/html/daten.html">Datenschutzerklärung </a> <br><br>
+                            - <a href="/Mittagstisch/html/impressum.html">Impressum </a> <br>
+                            - <a href="/Mittagstisch/html/daten.html">Datenschutzerklärung </a> <br><br>
 
                             Diverses: <br>
-                            - <a href="/html/diverses.html">Aktuelles</a>
+                            - <a href="/Mittagstisch/html/diverses.html">Aktuelles</a>
                         </p>
                     </div>
                 </div>
@@ -140,7 +140,7 @@ $(document).ready(function () {
     }
 
     function handleAnmeldungPage() {
-        if (window.location.href.indexOf("/html/anmeldung.html") > -1) {
+        if (window.location.href.indexOf("/Mittagstisch/html/anmeldung.html") > -1) {
             // Min date for sign in form
             var today = new Date().toISOString().split('T')[0];
             document.getElementById("date").setAttribute("min", today);
@@ -197,7 +197,7 @@ $(document).ready(function () {
     }
 
     function loadFavicon() {
-        const favicon = '<link rel="shortcut icon" href="../img/logo/logo_notext2.png" type="image/x-icon">'
+        const favicon = '<link rel="shortcut icon" href="/Mittagstisch/img/logo/logo_notext2.png" type="image/x-icon">'
         $('head').append(favicon);
     }
     loadFavicon()
@@ -210,7 +210,7 @@ $(document).ready(function () {
     });
 
     $(".button-signin").click(function () {
-        window.location.replace("/html/anmeldung.html");
+        window.location.replace("/Mittagstisch/html/anmeldung.html");
     });
 
     $("#popup-close").click(function() {
