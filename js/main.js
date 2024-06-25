@@ -123,7 +123,7 @@ $(document).ready(function () {
     function loadTitleName() {
         var currentPageURL = window.location.pathname;
 
-        if (currentPageURL !== '/Mittagstisch/index.html' && currentPageURL !== '/') {
+        if (currentPageURL !== '/Mittagstisch/index.html' && currentPageURL !== '/Mittagstisch/') {
             pageTitleText = document.title.toUpperCase(); // Convert the page title to uppercase
 
             var pageContent = `
