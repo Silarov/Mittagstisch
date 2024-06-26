@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: titleFont;
-    src: url('/img/font/riffic/RifficFree-Bold.ttf') format("truetype");
+    src: url('img/font/riffic/RifficFree-Bold.ttf') format("truetype");
 }
 
 :root {
