@@ -1,65 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700;900&display=swap');
+
 :root {
     --main-color: #c83c34;
     --nav-height: 110px;
     --pc-width: 5vw;
     --main-bg-color: #272e33;
     --text-width: 40vw;
+    --highlight-color: #ff6f61;
+    --card-bg-color: #f0f0f0;
+    --card-bg-hover: #eea29b;
 }
 
 /*---------------------- Main ----------------------------*/
 
+body {
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.team {
+    text-align: center;
+    padding: 20px;
+    color: var(--main-bg-color);
+}
+
+.team h1 {
+    font-family: 'Chewy', cursive;
+    color: var(--main-color);
+    font-size: 3rem;
+}
+
 .team-user-all {
-    background-color: var(--main-color);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.team-user {
+    background-color: var(--card-bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-user:hover {
+    transform: scale(1.05);
+    animation: changeBackgroundColor 0.5s linear forwards;
 }
 
 .team-user-container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
 }
 
 .team-user-img img {
-    background-color:rgb(255, 255, 255);
-    padding: 20px;
-    border: 3px solid var(--main-bg-color);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid var(--main-color);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Define styles for the team user title */
+.team-user-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+    color: #555;
+}
+
+/* Adjustments for better spacing and readability */
+.team-user-name {
+    margin-top: 10px;
+    line-height: 1.5;
+    color: #333;
+}
+
+
+.team-user-name h2 {
+    font-family: 'Chewy', cursive;
+    color: var(--main-color);
+    margin: 10px 0 5px;
+}
+
+.team-user-name p {
+    font-family: 'Titillium Web', sans-serif;
+    color: var(--main-bg-color);
+    margin: 5px 0 0;
+    padding: 0 10px;
+}
+
+@keyframes changeBackgroundColor {
+    0% {
+        background-color: var(--card-bg-color); /* Start color */
+    }
+    100% {
+        background-color: var(--card-bg-hover); /* End color */
+    }
 }
 
 @media only screen and (max-width: 1200px) {
-
-    :root {
-        --pc-width: 5vw;
-        --text-width: 90vw;
-    }
-}
-
-@media only screen and (max-width: 1050px) {
-    .vorstand-user-all {
-        display: flex;
+    .team-user-all {
         flex-direction: column;
-        width: calc(100 - 2*var(--pc-width));
-        align-items: center;
-        gap: 50px;
+        gap: 2rem;
+    }
+
+    .team-user {
+        width: calc(100% - 4rem);
     }
 }
-
-@media only screen and (max-width: 800px) {
-
-
-    .uber-uns-elena-text, 
-    .uber-uns-elena-img img {
-        max-width: calc(60vw - 2*(var(--pc-width)));
-    }
-
-    .uber-uns-elena-text-img {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 50px;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-    .uber-uns-elena-text{
-        max-width: calc(100vw - 4*(var(--pc-width)));
-    }
-} 
