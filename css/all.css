@@ -173,7 +173,7 @@ main {
 }
 
 h1, h2 {
-    font-family: ' ', cursive;
+    font-family: 'Chewy', cursive;
     color: var(--highlight-color);
     margin-bottom: 1rem;
     animation: fadeIn 1s ease-in-out;
