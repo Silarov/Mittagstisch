@@ -102,7 +102,11 @@ body {
         font-size: 50px;
     }
 
-    .rules-text {
-        width: ;
+    .rules {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 }
