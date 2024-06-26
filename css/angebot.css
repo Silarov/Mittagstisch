@@ -4,6 +4,8 @@
     --pc-width: 10vw;
     --main-bg-color: #272e33;
     --text-width: 40vw;
+    --secondary-color: white;
+    --highlight-color: #ff6f61;
 }
 
 .banner-offer-container {
