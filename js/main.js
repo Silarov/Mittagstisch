@@ -59,10 +59,6 @@ $(document).ready(function () {
                     <div class="footer-text-column2-contact">
                         <h1>Kontakt</h1>
                         <p>
-                        <!--<b>Betreuung & Küche</b> <br>
-                            Elena Staltner <br>
-                            Email: <a href="mailto:info@mittagstisch-hirschthal.ch">info@mittagstisch-hirschthal.ch</a><br><br>-->
-
                             <b>Administration</b> <br>
                             Melanie Hauri <br>
                             Email: <a href="mailto:info@mittagstisch-hirschthal.ch">info@mittagstisch-hirschthal.ch</a>
@@ -81,12 +77,7 @@ $(document).ready(function () {
                         <h1>Links</h1>
                         <p>
                             Links <br>
-                            - <a href="https://www.schule-hirschthal.ch/index.php/information/ferienplan" target="_blank"> Ferienplan </a><br><br>
-
-                            <!--Unsere Lieferanten von Lebensmitteln: <br>
-                            - <a href="http://www.treffpunkt-detailisten.ch/ch/de/shop.php?magasin=97"> Dorfladen Hirschthal </a><br>
-                            - <a href="https://morgenthaler-gemuese.ch/"> Morgenthaler Gemüse </a><br>
-                            - <a href="http://www.metzgerei-sandmeier.ch/"> Metzgerei Sandmeier </a><br><br>-->
+                            - <a href="/Mittagstisch/files/Ferienplan.pdf" target="_blank"> Ferienplan </a><br><br>
 
                             Gesetzliche Grundlagen: <br>
                             - <a href="https://gesetzessammlungen.ag.ch/app/de/texts_of_law/815.300/versions/2277" target="_blank"> Kinderbetreuungsgesetz (KiBeG) </a><br>
