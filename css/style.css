@@ -35,7 +35,7 @@ body {
     height: calc(100vh - var(--nav-height));
     position: absolute;
     top: var(--nav-height);
-    background-image: url('/img/Kian Drawing.jpg');
+    background-image: url('/Mittagstisch/img/Kian Drawing.jpg');
     background-size: cover;
     background-position: left;
     filter: brightness(0.5);
