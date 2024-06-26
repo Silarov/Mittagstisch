@@ -43,9 +43,8 @@ body {
 
 .name-start {
     margin: 0 var(--pc-width);
-    color: rgb(255, 255, 255);
     z-index: 1;
-    text-align: center;
+    text-align: left;
 }
 
 .title-name {
@@ -91,73 +90,6 @@ body {
 
 .rules-text {
     max-width: 60%;
-}
-
-.img-text-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-}
-
-.img-text-one, .img-text-two {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    transition: transform 0.3s ease-in-out;
-}
-
-.text h1, .text h2 {
-    font-family: 'Chewy', cursive;
-    color: var(--highlight-color);
-    margin-bottom: 1rem;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.img-text-container-text, .opening-times, main p {
-    line-height: 1.5;
-}
-
-.animated-img, main {
-    animation: fadeIn 1s ease-in-out;
-}
-
-.animated-link {
-    color: var(--highlight-color);
-    text-decoration: none;
-    position: relative;
-    transition: color 0.3s ease-in-out;
-}
-
-.animated-link::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--highlight-color);
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out;
-}
-
-.animated-link:hover {
-    color: var(--main-color);
-}
-
-.animated-link:hover::after {
-    visibility: visible;
-    transform: scaleX(1);
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 @media only screen and (max-width: 1200px) {
