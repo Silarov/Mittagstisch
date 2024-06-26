@@ -48,7 +48,12 @@ body {
 
 .team-user:hover {
     transform: scale(1.05);
-    animation: changeBackgroundColor 0.5s linear forwards;
+    animation: changeBackgroundColor 0.3s linear forwards;
+}
+
+.rotate-img {
+    transform: rotate(360deg);
+    transition: transform 0.3s ease-in;
 }
 
 .team-user-container {

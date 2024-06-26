@@ -217,16 +217,7 @@ $(document).ready(function () {
         $("#popup-container").css("display", "none");
     });
 
-    // $(".team-user").hover(function(){
-    //     $(this).find(".team-user-img img").css({
-    //         'transform': 'rotate(360deg)',
-    //         'transition': 'transform 0.3s ease-in'
-    //     });
-    // }, function(){
-    //     $(this).find(".team-user-img img").css
-    //     ({
-    //         'transform': 'rotate(0deg)',
-    //         'transition': 'transform 0s ease-in'
-    //     });
-    // });
+    $(".team-user").click(function() {
+        $(this).find(".team-user-img img").toggleClass("rotate-img");
+    });
 });
