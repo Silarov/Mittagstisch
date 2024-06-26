@@ -1,58 +1,28 @@
 :root {
     --main-color: #c83c34;
     --nav-height: 110px;
-    --pc-width: 20vw;
+    --pc-width: 5vw;
     --main-bg-color: #272e33;
     --text-width: 40vw;
 }
 
 /*---------------------- Main ----------------------------*/
 
-/* .uber-uns-elena-text-img {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-} */
-
-/* .uber-uns-elena-text {
-    max-width: calc((var(--pc-width) * 3) / 2);
+.team-user-all {
+    background-color: var(--main-color);
 }
 
-.uber-uns-elena-img img {
-    max-width: calc((var(--pc-width) * 3) / 3.5);
-    box-shadow: 10px 10px var(--main-bg-color);
-} */
-
-.vorstand-user-all {
+.team-user-container {
     display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    flex-wrap: wrap;
-    text-align: center;
-  }
-  
-  .vorstand-user {
-    flex: 0 0 auto;
-    border: 5px solid var(--main-bg-color);
-    border-radius: 20px;
-    background-color: white;
-    filter:drop-shadow(10px 10px 3px var(--main-bg-color));
-    padding-bottom: 15px;
-  }
-  
-  .vorstand-user img {
-    max-width: 250px;
-    border-radius: 15px 15px 0 0;
-  }
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
 
-  .springer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
+.team-user-img img {
+    background-color:rgb(255, 255, 255);
+    padding: 20px;
+    border: 3px solid var(--main-bg-color);
+}
 
 @media only screen and (max-width: 1200px) {
 
@@ -60,14 +30,6 @@
         --pc-width: 5vw;
         --text-width: 90vw;
     }
-
-    .uber-uns-elena-text {
-        max-width: 40vw;
-    }
-    
-    .uber-uns-elena-img img {
-        max-width: 33vw;
-    }    
 }
 
 @media only screen and (max-width: 1050px) {
