@@ -163,15 +163,25 @@ $(document).ready(function () {
     function loadOpeningTimes() {
         $(".opening-times").append(
             `
-            <h3>Mittagstisch</h3>
-            <p>Montag, Dienstag, Donnerstag</p>
-            <p>11.45 h bis 13.30 h</p>
-            <h3>Frühbetreuung</h3>
-            <p>Montag, Dienstag, Donnerstag</p>
-            <p>6.30 h bis 8.00 h</p>
-            <h3>Nachmittagsbetreuung</h3>
-            <p>Montag, Dienstag, Donnerstag</p>
-            <p>13.30 h bis 17.30 h</p><br>
+            <table id="opening-times">
+                <thead>
+                    <th>Montag/Dienstag/Donnerstag</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Frühbetreuung</td>
+                        <td>06:30 bis 08:00 Uhr</td>
+                    </tr>
+                    <tr>
+                        <td>Mittagstisch</td>
+                        <td>11:45 bis 13:15 Uhr</td>
+                    </tr>
+                    <tr>
+                        <td>Nachmittagsbetreuung</td>
+                        <td>13:15 bis 17:30 Uhr</td>
+                    </tr>
+                </tbody>
+            </table>
             `
         );
     }
