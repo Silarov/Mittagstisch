@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700;900&display=swap');
 
  :root {
     --main-color: #c83c34;
     --nav-height: 110px;
-    --pc-width: 10vw;
+    --pc-width: 20vw;
     --main-bg-color: #272e33;
     --text-width: 40vw;
 }

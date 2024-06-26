@@ -1,5 +1,9 @@
 $(document).ready(function () {
 
+    if (window.location.pathname === "/Mittagstisch/html/anmeldung.html") {
+        $(".page-title-text").css("margin", "0 var(--pc-width)");
+    }
+
     // Add event listeners to show/hide the text boxes based on "Yes" or "No" selections
     document.getElementById("Allergien-yes").addEventListener("change", function () {
         var detailsField = document.getElementById("Allergien-details");
