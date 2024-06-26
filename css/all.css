@@ -145,7 +145,7 @@ nav ul li a:hover {
 }
 
 .page-title-text {
-    margin: 0 var(--pc-width);
+    margin: 0 calc(var(--pc-width) * 2);
     font-size: x-large;
 }
 
