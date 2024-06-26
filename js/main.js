@@ -226,4 +226,8 @@ $(document).ready(function () {
     $("#popup-close").click(function() {
         $("#popup-container").css("display", "none");
     });
+
+    $(".team-user").click(function() {
+        $(this).find(".team-user-img img").toggleClass("rotate-img");
+    });
 });

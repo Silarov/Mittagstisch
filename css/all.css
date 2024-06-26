@@ -3,7 +3,7 @@
 :root {
     --main-color: #c83c34;
     --nav-height: 110px;
-    --pc-width: 15vw;
+    --pc-width: 10vw;
     --main-bg-color: #272e33;
     --text-width: 40vw;
 }
@@ -156,75 +156,21 @@ main {
 .img-text-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+    flex-wrap: wrap;
 }
 
-.img-text-one, .img-text-two {
+.img-text-one,
+.img-text-two {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 2rem;
-    width: 100%;
     justify-content: space-between;
-    transition: transform 0.3s ease-in-out;
-}
-
-h1, h2 {
-    font-family: 'Chewy', cursive;
-    color: var(--highlight-color);
-    margin-bottom: 1rem;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.animated-img, main {
-    animation: fadeIn 1s ease-in-out;
-}
-
-.img-text-container-text, .opening-times, main p {
-    line-height: 1.5;
-}
-
-.animated-link {
-    color: var(--highlight-color);
-    text-decoration: none;
-    position: relative;
-    transition: color 0.3s ease-in-out;
-}
-
-.animated-link::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--highlight-color);
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out;
-}
-
-.animated-link:hover {
-    color: var(--main-color);
-}
-
-.animated-link:hover::after {
-    visibility: visible;
-    transform: scaleX(1);
 }
 
 .img-text-container-img,
 .img-text-container-text {
     max-width: 25vw;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 .banner-offer {
