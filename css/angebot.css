@@ -32,6 +32,21 @@
     color: white;
 }
 
+main table {
+    width: 100%;
+}
+
+main th {
+    background-color: var(--main-color);
+    color: white;
+    padding: 16px;
+}
+
+main td {
+    border: 2px solid var(--main-bg-color);
+    padding: 16px;
+}
+
 @media only screen and (max-width: 1200px) {
 
     :root {
