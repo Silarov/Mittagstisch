@@ -269,6 +269,11 @@ footer a {
       .nav-container.fullscreen {
         height: 100vh;
       }
+
+    .anmeldung {
+        color: black;
+        background-color: white;
+    }
       
       .dt {
         display: none;
