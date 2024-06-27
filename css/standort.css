@@ -30,6 +30,11 @@
     z-index: 1;
     display: flex;
     align-items: center;
+    text-wrap: nowrap;
+}
+
+.map-text {
+    width: 100px;
 }
 
 @media only screen and (max-width: 800px) {
