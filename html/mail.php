@@ -148,6 +148,8 @@ if (!empty($validFor)) {
     }
 }
 
+$automatischeVerlaengerung = isset($_POST['AutomatischeVerlängerung']) ? $_POST['AutomatischeVerlängerung'] : '';
+
 $nachBetreuungNachHause = isset($_POST['NachBetreuungNachHause']) ? $_POST['NachBetreuungNachHause'] : '';
 $alleineNachHause = isset($_POST['AlleineNachHause']) ? $_POST['AlleineNachHause'] : '';
 $allergien = isset($_POST['Allergien']) ? $_POST['Allergien'] : '';
@@ -162,6 +164,7 @@ $medikamenteDetails = ($medikamente == 'yes') ? $_POST['Medikamente-details'] : 
 
 $mailBody .= "
     ---------------------------------------- <br>
+    Automatische Verlängerung: $automatischeVerlaengerung <br>
     Nach Betreuung nach Hause: $nachBetreuungNachHause<br>
     Alleine nach Hause: $alleineNachHause<br>
     Allergien: $allergien<br>

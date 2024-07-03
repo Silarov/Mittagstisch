@@ -156,7 +156,7 @@ $(document).ready(function () {
             `
             <table id="opening-times">
                 <thead>
-                    <th>Montag/Dienstag/Donnerstag</th>
+                    <th colspan="2">Montag, Dienstag und Donnerstag</th>
                 </thead>
                 <tbody>
                     <tr>
