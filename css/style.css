@@ -3,7 +3,7 @@
 
 @font-face {
     font-family: titleFont;
-    src: url('/Mittagstisch/img/font/riffic/RifficFree-Bold.ttf') format("truetype");
+    src: url('../img/font/riffic/RifficFree-Bold.ttf') format("truetype");
 }
 
 :root {
@@ -35,10 +35,10 @@ body {
     height: calc(100vh - var(--nav-height));
     position: absolute;
     top: var(--nav-height);
-    background-image: url('/Mittagstisch/img/Kian Drawing.jpg');
+    background-image: url('../img/Kian Drawing.jpg');
     background-size: cover;
     background-position: left;
-    filter: brightness(0.5);
+    filter: brightness(0.75);
 }
 
 .name-start {

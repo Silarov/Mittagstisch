@@ -34,12 +34,14 @@
 
 main table {
     width: 100%;
+    border-collapse: collapse;
 }
 
 main th {
     background-color: var(--main-color);
     color: white;
     padding: 16px;
+    border: 2px solid var(--main-bg-color);
 }
 
 main td {
