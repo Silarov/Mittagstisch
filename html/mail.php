@@ -148,7 +148,7 @@ if (!empty($validFor)) {
     }
 }
 
-$automatischeVerlaengerung = isset($_POST['AutomatischeVerlängerung']) ? $_POST['AutomatischeVerlängerung'] : '';
+$automatischeVerlaengerung = isset($_POST['AutomatischeVerlaengerung']) ? $_POST['AutomatischeVerlaengerung'] : '';
 
 $nachBetreuungNachHause = isset($_POST['NachBetreuungNachHause']) ? $_POST['NachBetreuungNachHause'] : '';
 $alleineNachHause = isset($_POST['AlleineNachHause']) ? $_POST['AlleineNachHause'] : '';
@@ -208,12 +208,12 @@ try {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Mittagstisch/css/all.css">
-    <link rel="stylesheet" href="/Mittagstisch/css/signin.css">
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" href="/css/signin.css">
     <link rel="shortcut icon" href="/Mittagstisch/img/logo/logo_notext2.png" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="/Mittagstisch/js/main.js"></script>
-    <script src="/Mittagstisch/js/anmeldung.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/anmeldung.js"></script>
     <title>Anmeldung</title>
 </head>
 
