@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    if (window.location.pathname === "/Mittagstisch/html/anmeldung.html") {
+    if (window.location.pathname === "/html/anmeldung.html") {
         $(".page-title-text").css("margin", "0 var(--pc-width)");
     }
 

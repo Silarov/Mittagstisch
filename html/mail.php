@@ -29,20 +29,21 @@ $mail->CharSet = $smtpCharSet;
 $mail->ContentType = $smtpContentType;
 $mail->Encoding = $smtpEncoding;
 
-$fnameChild = $_POST['Vorname_Kind'];
-$lnameChild = $_POST['Nachname_Kind'];
-$classChild = $_POST['Klasse_Kind'];
-$teacherChild = $_POST['Lehrer_Kind'];
-$birthdayChild = $_POST['Geburtstag'];
-$fnameParent = $_POST['Vorname_Elternteil_1'];
-$lnameParent = $_POST['Nachname_Elternteil_1'];
-$address = $_POST['Adresse_1'];
-$tel = $_POST['Telefonnummer_1'];
-$email = $_POST['Mail_Adresse_1'];
-$comment = $_POST['Bemerkung'];
-$day = $_POST['Betreuungstermin_ab'];
-$validFor = [];
+// Retrieve form data with checks
+$fnameChild = isset($_POST['Vorname_Kind']) ? htmlspecialchars($_POST['Vorname_Kind']) : 'Nicht angegeben';
+$lnameChild = isset($_POST['Nachname_Kind']) ? htmlspecialchars($_POST['Nachname_Kind']) : 'Nicht angegeben';
+$classChild = isset($_POST['Klasse_Kind']) ? htmlspecialchars($_POST['Klasse_Kind']) : 'Nicht angegeben';
+$teacherChild = isset($_POST['Lehrer_Kind']) ? htmlspecialchars($_POST['Lehrer_Kind']) : 'Nicht angegeben';
+$birthdayChild = isset($_POST['Geburtstag']) ? $_POST['Geburtstag'] : 'Nicht angegeben';
+$fnameParent = isset($_POST['Vorname_Elternteil_1']) ? htmlspecialchars($_POST['Vorname_Elternteil_1']) : 'Nicht angegeben';
+$lnameParent = isset($_POST['Nachname_Elternteil_1']) ? htmlspecialchars($_POST['Nachname_Elternteil_1']) : 'Nicht angegeben';
+$address = isset($_POST['Adresse_1']) ? htmlspecialchars($_POST['Adresse_1']) : 'Nicht angegeben';
+$tel = isset($_POST['Telefonnummer_1']) ? htmlspecialchars($_POST['Telefonnummer_1']) : 'Nicht angegeben';
+$email = isset($_POST['Mail_Adresse_1']) ? htmlspecialchars($_POST['Mail_Adresse_1']) : 'Nicht angegeben';
+$comment = isset($_POST['Bemerkung']) ? htmlspecialchars($_POST['Bemerkung']) : 'Keine Bemerkung';
+$day = isset($_POST['Betreuungstermin_ab']) ? $_POST['Betreuungstermin_ab'] : 'Nicht angegeben';
 $selectedDates = isset($_POST['selectedDates']) ? $_POST['selectedDates'] : [];
+$validFor = isset($_POST['validFor']) ? $_POST['validFor'] : [];
 
 $dateBegin = new DateTime($day);
 $formattedDateBegin = $dateBegin->format('d.m.Y');
@@ -50,47 +51,10 @@ $formattedDateBegin = $dateBegin->format('d.m.Y');
 $dateBirthDay = new DateTime($birthdayChild);
 $formattedBirthDay = $dateBirthDay->format('d.m.Y');
 
-
-
-// Define the email content
+// Email content
 $mail->setFrom('anmeldung@mittagstisch-hirschthal.ch', 'Anmeldung Mittagstisch Hirschthal');
 $mail->addAddress('info@mittagstisch-hirschthal.ch', 'Mittagstisch Hirschthal');
 $mail->Subject = 'Formular Einreichung';
-
-// Check if the 'semester1' checkbox is selected
-if (isset($_POST['Semester_1'])) {
-    $validFor[] = '1. Semester';
-}
-
-// Check if the 'semester2' checkbox is selected
-if (isset($_POST['Semester_2'])) {
-    $validFor[] = '2. Semester';
-}
-
-// Check if the 'quartal1' checkbox is selected
-if (isset($_POST['Quartal_1'])) {
-    $validFor[] = '1. Quartal';
-}
-
-// Check if the 'quartal2' checkbox is selected
-if (isset($_POST['Quartal_2'])) {
-    $validFor[] = '2. Quartal';
-}
-
-// Check if the 'quartal3' checkbox is selected
-if (isset($_POST['Quartal_3'])) {
-    $validFor[] = '3. Quartal';
-}
-
-// Check if the 'quartal4' checkbox is selected
-if (isset($_POST['Quartal_4'])) {
-    $validFor[] = '4. Quartal';
-}
-
-// Check if the 'onetime' checkbox is selected
-if (isset($_POST['Flexibel'])) {
-    $validFor[] = 'Flexibel';
-}
 
 $mailBody = "
 <p>
@@ -108,22 +72,23 @@ E-Mail: $email <br>
 ----------------------------------------</p>
 ";
 
+// Add second person details if provided
 if (isset($_POST['secondPersonCheck'])) {
-    $fnameParent = $_POST['Vorname_Elternteil_2'];
-    $lnameParent = $_POST['Nachname_Elternteil_2'];
-    $address = $_POST['Adresse_2'];
-    $tel = $_POST['Telefonnummer_2'];
-    $email = $_POST['Mail_Adresse_2'];
+    $fnameParent2 = isset($_POST['Vorname_Elternteil_2']) ? htmlspecialchars($_POST['Vorname_Elternteil_2']) : 'Nicht angegeben';
+    $lnameParent2 = isset($_POST['Nachname_Elternteil_2']) ? htmlspecialchars($_POST['Nachname_Elternteil_2']) : 'Nicht angegeben';
+    $address2 = isset($_POST['Adresse_2']) ? htmlspecialchars($_POST['Adresse_2']) : 'Nicht angegeben';
+    $tel2 = isset($_POST['Telefonnummer_2']) ? htmlspecialchars($_POST['Telefonnummer_2']) : 'Nicht angegeben';
+    $email2 = isset($_POST['Mail_Adresse_2']) ? htmlspecialchars($_POST['Mail_Adresse_2']) : 'Nicht angegeben';
 
     $mailBody .= "
-    <p>---------------------------------------- <br>
+    <p>
     Bezugsperson 2: <br><br>
 
-    Vorname Bezugsperson: $fnameParent <br>
-    Nachname Bezugsperson: $lnameParent <br>
-    Adresse: $address <br>
-    Telefonnummer: $tel <br>
-    E-Mail: $email <br>
+    Vorname Bezugsperson: $fnameParent2 <br>
+    Nachname Bezugsperson: $lnameParent2 <br>
+    Adresse: $address2 <br>
+    Telefonnummer: $tel2 <br>
+    E-Mail: $email2 <br>
     ----------------------------------------</p>
     ";
 }
@@ -131,7 +96,6 @@ if (isset($_POST['secondPersonCheck'])) {
 $mailBody .= "Betreuungstage: <br>";
 if (!empty($selectedDates)) {
     foreach ($selectedDates as $date) {
-        // You can use $date as needed
         $mailBody .= "- $date <br>";
     }
 } else {
@@ -142,25 +106,25 @@ $mailBody .= "<br>
     Betreuungstermin: $formattedDateBegin <br>
     Gültig für: <br>";
 
+// Ensure 'validFor' values are added
 if (!empty($validFor)) {
     foreach ($validFor as $valid) {
         $mailBody .= "- $valid <br>";
     }
 }
 
-$automatischeVerlaengerung = isset($_POST['AutomatischeVerlängerung']) ? $_POST['AutomatischeVerlängerung'] : '';
-
-$nachBetreuungNachHause = isset($_POST['NachBetreuungNachHause']) ? $_POST['NachBetreuungNachHause'] : '';
-$alleineNachHause = isset($_POST['AlleineNachHause']) ? $_POST['AlleineNachHause'] : '';
-$allergien = isset($_POST['Allergien']) ? $_POST['Allergien'] : '';
-$lebensmittelallergien = isset($_POST['Lebensmittelallergien']) ? $_POST['Lebensmittelallergien'] : '';
-$medikamente = isset($_POST['Medikamente']) ? $_POST['Medikamente'] : '';
-$schulhausplatz = isset($_POST['Schulhausplatz']) ? $_POST['Schulhausplatz'] : '';
+$automatischeVerlaengerung = isset($_POST['AutomatischeVerlaengerung']) ? $_POST['AutomatischeVerlaengerung'] : 'Nicht angegeben';
+$nachBetreuungNachHause = isset($_POST['NachBetreuungNachHause']) ? $_POST['NachBetreuungNachHause'] : 'Nicht angegeben';
+$alleineNachHause = isset($_POST['AlleineNachHause']) ? $_POST['AlleineNachHause'] : 'Nicht angegeben';
+$allergien = isset($_POST['Allergien']) ? $_POST['Allergien'] : 'Nicht angegeben';
+$lebensmittelallergien = isset($_POST['Lebensmittelallergien']) ? $_POST['Lebensmittelallergien'] : 'Nicht angegeben';
+$medikamente = isset($_POST['Medikamente']) ? $_POST['Medikamente'] : 'Nicht angegeben';
+$schulhausplatz = isset($_POST['Schulhausplatz']) ? $_POST['Schulhausplatz'] : 'Nicht angegeben';
 
 // Check if there are text areas and 'yes' is selected
-$allergienDetails = ($allergien == 'yes') ? $_POST['Allergien-details'] : '';
-$lebensmittelallergienDetails = ($lebensmittelallergien == 'yes') ? $_POST['Lebensmittelallergien-details'] : '';
-$medikamenteDetails = ($medikamente == 'yes') ? $_POST['Medikamente-details'] : '';
+$allergienDetails = ($allergien == 'yes') ? isset($_POST['Allergien-details']) ? $_POST['Allergien-details'] : 'Nicht angegeben' : 'Nicht angegeben';
+$lebensmittelallergienDetails = ($lebensmittelallergien == 'yes') ? isset($_POST['Lebensmittelallergien-details']) ? $_POST['Lebensmittelallergien-details'] : 'Nicht angegeben' : 'Nicht angegeben';
+$medikamenteDetails = ($medikamente == 'yes') ? isset($_POST['Medikamente-details']) ? $_POST['Medikamente-details'] : 'Nicht angegeben' : 'Nicht angegeben';
 
 $mailBody .= "
     ---------------------------------------- <br>
@@ -181,9 +145,8 @@ $mailBody .= "
     Bemerkung: $comment
 ";
 
-// Email content
+// Final email body
 $mail->isHTML(true);
-
 $mail->Body = "
 Guten Tag, es gab eine neue Anmeldung für den Mittagstisch Hirschthal <br><br>
 ---------------------------------------- <br>
@@ -199,8 +162,8 @@ try {
     $successMessage = 'Leider gab es ein Problem, probieren Sie es später erneut.';
     $successClass = 'error';
 }
-?>
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -208,12 +171,12 @@ try {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Mittagstisch/css/all.css">
-    <link rel="stylesheet" href="/Mittagstisch/css/signin.css">
+    <link rel="stylesheet" href="/css/all.css">
+    <link rel="stylesheet" href="/css/signin.css">
     <link rel="shortcut icon" href="/Mittagstisch/img/logo/logo_notext2.png" type="image/x-icon">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="/Mittagstisch/js/main.js"></script>
-    <script src="/Mittagstisch/js/anmeldung.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/anmeldung.js"></script>
     <title>Anmeldung</title>
 </head>
 
