@@ -20,6 +20,124 @@ body {
     font-family: 'Titillium Web', sans-serif;
 }
 
+.veb-notice {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-left: 8px solid var(--main-color);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.veb-notice h1 {
+    margin-top: 0;
+    color: var(--main-color);
+    font-size: 2rem;
+}
+
+.veb-notice p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #272e33;
+}
+
+.veb-notice a {
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    .veb-notice {
+        margin: 0 1rem;
+        padding: 1.5rem;
+        border-radius: 15px;
+    }
+
+    .veb-notice h1 {
+        font-size: 1.6rem;
+    }
+
+    .veb-notice p {
+        font-size: 1rem;
+    }
+}
+
+.veb-fixed-banner {
+    position: fixed;
+    left: 50%;
+    bottom: 1.5rem;
+    transform: translateX(-50%);
+    z-index: 9999;
+
+    width: calc(100% - 2rem);
+    max-width: 950px;
+
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+    border: 5px solid var(--secondary-color);
+    border-radius: 18px;
+
+    padding: 1.2rem 3.5rem 1.2rem 1.5rem;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.veb-fixed-banner a {
+    color: var(--secondary-color);
+    font-weight: 700;
+    text-decoration: underline;
+    margin-left: 0.5rem;
+}
+
+.veb-banner-close {
+    position: absolute;
+    top: 0.4rem;
+    right: 0.8rem;
+
+    background: transparent;
+    border: none;
+    color: var(--secondary-color);
+
+    font-size: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.veb-banner-close:hover {
+    transform: scale(1.15);
+}
+
+@media only screen and (max-width: 700px) {
+    .veb-fixed-banner {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        transform: none;
+
+        width: auto;
+        max-width: none;
+
+        border-radius: 18px 18px 0 0;
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+
+        padding: 1rem 3rem 1rem 1rem;
+        font-size: 0.95rem;
+    }
+
+    .veb-fixed-banner a {
+        display: block;
+        margin-left: 0;
+        margin-top: 0.4rem;
+    }
+}
+
 .title-page {
     width: 100vw;
     height: calc(100vh - var(--nav-height));
